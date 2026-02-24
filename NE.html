@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
@@ -7,7 +7,7 @@
   <title>Navegación Esencial - Nileynave</title>
 
   <!-- Favicon -->
-  <link rel="icon" type="image/png" href=" https://res.cloudinary.com/dipv76dpn/image/upload/v1761056303/gemini-2.5-flash-image-preview_nano-banana__Quiero_mejorar_este__1_poda8e.png" />
+  <link rel="icon" type="image/png" href="https://res.cloudinary.com/dipv76dpn/image/upload/v1761056303/gemini-2.5-flash-image-preview_nano-banana__Quiero_mejorar_este__1_poda8e.png" />
 
   <!-- CSS General -->
   <link rel="stylesheet" href="style.css">
@@ -419,11 +419,11 @@
         <span class="tema-icono">🌙</span>
       </button>
 
-      <div class="hamburger" id="hamburger" aria-label="Menú de navegación">
+      <button class="hamburger" id="hamburger" aria-label="Menú de navegación" aria-expanded="false" aria-controls="menu" type="button">
         <span></span>
         <span></span>
         <span></span>
-      </div>
+      </button>
     </div>
   </nav>
 
@@ -445,6 +445,7 @@
               <option value="navegador">Navegadores</option>
               <option value="buscador">Buscadores</option>
               <option value="vpn">VPN</option>
+              <option value="vps">VPS / Cloud</option>
               <option value="extension">Extensiones</option>
               <option value="bloqueador">Bloqueadores</option>
             </select>
@@ -516,8 +517,8 @@
             </div>
             
             <div class="herramienta-enlaces">
-              <a href="https://www.mozilla.org/firefox/browsers/mobile/focus/" class="btn btn-sm" target="_blank">Descargar</a>
-              <a href="https://support.mozilla.org/firefox-focus" class="btn btn-sm btn-outline" target="_blank">Documentación</a>
+              <a href="https://www.mozilla.org/firefox/browsers/mobile/focus/" class="btn btn-sm" target="_blank" rel="noopener noreferrer">Descargar</a>
+              <a href="https://support.mozilla.org/firefox-focus" class="btn btn-sm btn-outline" target="_blank" rel="noopener noreferrer">Documentación</a>
             </div>
           </div>
 
@@ -554,8 +555,8 @@
             </div>
             
             <div class="herramienta-enlaces">
-              <a href="https://duckduckgo.com/" class="btn btn-sm" target="_blank">Visitar</a>
-              <a href="https://spreadprivacy.com/" class="btn btn-sm btn-outline" target="_blank">Blog</a>
+              <a href="https://duckduckgo.com/" class="btn btn-sm" target="_blank" rel="noopener noreferrer">Visitar</a>
+              <a href="https://spreadprivacy.com/" class="btn btn-sm btn-outline" target="_blank" rel="noopener noreferrer">Blog</a>
             </div>
           </div>
 
@@ -592,8 +593,8 @@
             </div>
             
             <div class="herramienta-enlaces">
-              <a href="https://protonvpn.com/" class="btn btn-sm" target="_blank">Descargar</a>
-              <a href="https://protonvpn.com/support/" class="btn btn-sm btn-outline" target="_blank">Soporte</a>
+              <a href="https://protonvpn.com/" class="btn btn-sm" target="_blank" rel="noopener noreferrer">Descargar</a>
+              <a href="https://protonvpn.com/support/" class="btn btn-sm btn-outline" target="_blank" rel="noopener noreferrer">Soporte</a>
             </div>
           </div>
 
@@ -630,8 +631,452 @@
             </div>
             
             <div class="herramienta-enlaces">
-              <a href="https://ublockorigin.com/" class="btn btn-sm" target="_blank">Instalar</a>
-              <a href="https://github.com/gorhill/uBlock" class="btn btn-sm btn-outline" target="_blank">GitHub</a>
+              <a href="https://ublockorigin.com/" class="btn btn-sm" target="_blank" rel="noopener noreferrer">Instalar</a>
+              <a href="https://github.com/gorhill/uBlock" class="btn btn-sm btn-outline" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
+          </div>
+
+          <!-- Herramienta 5 -->
+          <div class="herramienta-card" data-categoria="navegador" data-privacidad="alto" data-precio="gratuito">
+            <div class="herramienta-header">
+              <div class="herramienta-icono">🦁</div>
+              <div class="herramienta-info">
+                <span class="herramienta-categoria">Navegador</span>
+                <h3>Brave</h3>
+                <div class="nivel-privacidad">
+                  <span>Privacidad:</span>
+                  <div class="nivel-barra">
+                    <div class="nivel-fill alto"></div>
+                  </div>
+                  <span>Alto</span>
+                </div>
+              </div>
+            </div>
+
+            <p class="herramienta-descripcion">
+              Navegador con bloqueo nativo de anuncios y rastreadores, ideal para navegación rápida y privada.
+            </p>
+
+            <div class="herramienta-caracteristicas">
+              <h4>Características principales:</h4>
+              <ul class="caracteristicas-lista">
+                <li>Bloqueo nativo de rastreo</li>
+                <li>Protección contra fingerprinting</li>
+                <li>HTTPS por defecto</li>
+                <li>Basado en Chromium</li>
+              </ul>
+            </div>
+
+            <div class="herramienta-enlaces">
+              <a href="https://brave.com/download/" class="btn btn-sm" target="_blank" rel="noopener noreferrer">Descargar</a>
+              <a href="https://community.brave.com/" class="btn btn-sm btn-outline" target="_blank" rel="noopener noreferrer">Comunidad</a>
+            </div>
+          </div>
+
+          <!-- Herramienta 6 -->
+          <div class="herramienta-card" data-categoria="navegador" data-privacidad="alto" data-precio="gratuito">
+            <div class="herramienta-header">
+              <div class="herramienta-icono">🧅</div>
+              <div class="herramienta-info">
+                <span class="herramienta-categoria">Navegador</span>
+                <h3>Tor Browser</h3>
+                <div class="nivel-privacidad">
+                  <span>Privacidad:</span>
+                  <div class="nivel-barra">
+                    <div class="nivel-fill alto"></div>
+                  </div>
+                  <span>Alto</span>
+                </div>
+              </div>
+            </div>
+
+            <p class="herramienta-descripcion">
+              Navegador enfocado en anonimato que enruta tráfico por la red Tor para dificultar la trazabilidad.
+            </p>
+
+            <div class="herramienta-caracteristicas">
+              <h4>Características principales:</h4>
+              <ul class="caracteristicas-lista">
+                <li>Ruteo por red Tor</li>
+                <li>Mitigación de fingerprinting</li>
+                <li>Modo de seguridad configurable</li>
+                <li>Código abierto</li>
+              </ul>
+            </div>
+
+            <div class="herramienta-enlaces">
+              <a href="https://www.torproject.org/download/" class="btn btn-sm" target="_blank" rel="noopener noreferrer">Descargar</a>
+              <a href="https://support.torproject.org/" class="btn btn-sm btn-outline" target="_blank" rel="noopener noreferrer">Documentación</a>
+            </div>
+          </div>
+
+          <!-- Herramienta 7 -->
+          <div class="herramienta-card" data-categoria="buscador" data-privacidad="alto" data-precio="gratuito">
+            <div class="herramienta-header">
+              <div class="herramienta-icono">🔎</div>
+              <div class="herramienta-info">
+                <span class="herramienta-categoria">Buscador</span>
+                <h3>Startpage</h3>
+                <div class="nivel-privacidad">
+                  <span>Privacidad:</span>
+                  <div class="nivel-barra">
+                    <div class="nivel-fill alto"></div>
+                  </div>
+                  <span>Alto</span>
+                </div>
+              </div>
+            </div>
+
+            <p class="herramienta-descripcion">
+              Buscador que prioriza privacidad y evita crear perfiles de usuario durante las búsquedas.
+            </p>
+
+            <div class="herramienta-caracteristicas">
+              <h4>Características principales:</h4>
+              <ul class="caracteristicas-lista">
+                <li>Sin perfilado de usuario</li>
+                <li>Búsqueda privada desde web</li>
+                <li>Conexión cifrada</li>
+                <li>Interfaz simple</li>
+              </ul>
+            </div>
+
+            <div class="herramienta-enlaces">
+              <a href="https://www.startpage.com/" class="btn btn-sm" target="_blank" rel="noopener noreferrer">Visitar</a>
+              <a href="https://www.startpage.com/privacy-policy/" class="btn btn-sm btn-outline" target="_blank" rel="noopener noreferrer">Política</a>
+            </div>
+          </div>
+
+          <!-- Herramienta 8 -->
+          <div class="herramienta-card" data-categoria="buscador" data-privacidad="alto" data-precio="gratuito">
+            <div class="herramienta-header">
+              <div class="herramienta-icono">🛰️</div>
+              <div class="herramienta-info">
+                <span class="herramienta-categoria">Buscador</span>
+                <h3>SearXNG (instancias públicas)</h3>
+                <div class="nivel-privacidad">
+                  <span>Privacidad:</span>
+                  <div class="nivel-barra">
+                    <div class="nivel-fill alto"></div>
+                  </div>
+                  <span>Alto</span>
+                </div>
+              </div>
+            </div>
+
+            <p class="herramienta-descripcion">
+              Metabuscador libre que agrega resultados de múltiples motores sin seguimiento centralizado.
+            </p>
+
+            <div class="herramienta-caracteristicas">
+              <h4>Características principales:</h4>
+              <ul class="caracteristicas-lista">
+                <li>Código abierto</li>
+                <li>Sin rastreo por defecto</li>
+                <li>Resultados de múltiples fuentes</li>
+                <li>Posibilidad de autoalojar</li>
+              </ul>
+            </div>
+
+            <div class="herramienta-enlaces">
+              <a href="https://searx.space/" class="btn btn-sm" target="_blank" rel="noopener noreferrer">Instancias</a>
+              <a href="https://docs.searxng.org/" class="btn btn-sm btn-outline" target="_blank" rel="noopener noreferrer">Documentación</a>
+            </div>
+          </div>
+
+          <!-- Herramienta 9 -->
+          <div class="herramienta-card" data-categoria="vpn" data-privacidad="medio" data-precio="freemium">
+            <div class="herramienta-header">
+              <div class="herramienta-icono">🌬️</div>
+              <div class="herramienta-info">
+                <span class="herramienta-categoria">VPN</span>
+                <h3>Windscribe</h3>
+                <div class="nivel-privacidad">
+                  <span>Privacidad:</span>
+                  <div class="nivel-barra">
+                    <div class="nivel-fill medio"></div>
+                  </div>
+                  <span>Medio</span>
+                </div>
+              </div>
+            </div>
+
+            <p class="herramienta-descripcion">
+              VPN con plan gratuito mensual y funciones de bloqueo DNS para navegación cotidiana.
+            </p>
+
+            <div class="herramienta-caracteristicas">
+              <h4>Características principales:</h4>
+              <ul class="caracteristicas-lista">
+                <li>Plan gratuito con límite mensual</li>
+                <li>Apps para móvil y escritorio</li>
+                <li>Firewall y bloqueo de rastreo</li>
+                <li>Extensión para navegador</li>
+              </ul>
+            </div>
+
+            <div class="herramienta-enlaces">
+              <a href="https://windscribe.com/" class="btn btn-sm" target="_blank" rel="noopener noreferrer">Descargar</a>
+              <a href="https://windscribe.com/support/" class="btn btn-sm btn-outline" target="_blank" rel="noopener noreferrer">Soporte</a>
+            </div>
+          </div>
+
+          <!-- Herramienta 10 -->
+          <div class="herramienta-card" data-categoria="vpn" data-privacidad="medio" data-precio="gratuito">
+            <div class="herramienta-header">
+              <div class="herramienta-icono">☁️</div>
+              <div class="herramienta-info">
+                <span class="herramienta-categoria">VPN</span>
+                <h3>Cloudflare WARP</h3>
+                <div class="nivel-privacidad">
+                  <span>Privacidad:</span>
+                  <div class="nivel-barra">
+                    <div class="nivel-fill medio"></div>
+                  </div>
+                  <span>Medio</span>
+                </div>
+              </div>
+            </div>
+
+            <p class="herramienta-descripcion">
+              Túnel cifrado gratuito para proteger tráfico en redes públicas y mejorar estabilidad de conexión.
+            </p>
+
+            <div class="herramienta-caracteristicas">
+              <h4>Características principales:</h4>
+              <ul class="caracteristicas-lista">
+                <li>Protección en redes Wi-Fi públicas</li>
+                <li>Configuración de un clic</li>
+                <li>Disponible para móvil y escritorio</li>
+                <li>Modalidad gratuita</li>
+              </ul>
+            </div>
+
+            <div class="herramienta-enlaces">
+              <a href="https://one.one.one.one/" class="btn btn-sm" target="_blank" rel="noopener noreferrer">Descargar</a>
+              <a href="https://developers.cloudflare.com/warp-client/" class="btn btn-sm btn-outline" target="_blank" rel="noopener noreferrer">Guía</a>
+            </div>
+          </div>
+
+          <!-- Herramienta 11 -->
+          <div class="herramienta-card" data-categoria="extension" data-privacidad="medio" data-precio="gratuito">
+            <div class="herramienta-header">
+              <div class="herramienta-icono">🦡</div>
+              <div class="herramienta-info">
+                <span class="herramienta-categoria">Extensión</span>
+                <h3>Privacy Badger</h3>
+                <div class="nivel-privacidad">
+                  <span>Privacidad:</span>
+                  <div class="nivel-barra">
+                    <div class="nivel-fill medio"></div>
+                  </div>
+                  <span>Medio</span>
+                </div>
+              </div>
+            </div>
+
+            <p class="herramienta-descripcion">
+              Extensión de la EFF que aprende a bloquear rastreadores invisibles mientras navegas.
+            </p>
+
+            <div class="herramienta-caracteristicas">
+              <h4>Características principales:</h4>
+              <ul class="caracteristicas-lista">
+                <li>Bloqueo automático de rastreo</li>
+                <li>Desarrollado por la EFF</li>
+                <li>Configuración sencilla</li>
+                <li>Software libre</li>
+              </ul>
+            </div>
+
+            <div class="herramienta-enlaces">
+              <a href="https://privacybadger.org/" class="btn btn-sm" target="_blank" rel="noopener noreferrer">Instalar</a>
+              <a href="https://privacybadger.org/#faq" class="btn btn-sm btn-outline" target="_blank" rel="noopener noreferrer">FAQ</a>
+            </div>
+          </div>
+
+          <!-- Herramienta 12 -->
+          <div class="herramienta-card" data-categoria="bloqueador" data-privacidad="medio" data-precio="freemium">
+            <div class="herramienta-header">
+              <div class="herramienta-icono">🧠</div>
+              <div class="herramienta-info">
+                <span class="herramienta-categoria">Bloqueador</span>
+                <h3>NextDNS</h3>
+                <div class="nivel-privacidad">
+                  <span>Privacidad:</span>
+                  <div class="nivel-barra">
+                    <div class="nivel-fill medio"></div>
+                  </div>
+                  <span>Medio</span>
+                </div>
+              </div>
+            </div>
+
+            <p class="herramienta-descripcion">
+              Firewall DNS en la nube para bloquear publicidad, malware y rastreadores a nivel de red.
+            </p>
+
+            <div class="herramienta-caracteristicas">
+              <h4>Características principales:</h4>
+              <ul class="caracteristicas-lista">
+                <li>Bloqueo DNS configurable</li>
+                <li>Protección en todos tus dispositivos</li>
+                <li>Listas de bloqueo comunitarias</li>
+                <li>Plan gratuito disponible</li>
+              </ul>
+            </div>
+
+            <div class="herramienta-enlaces">
+              <a href="https://nextdns.io/" class="btn btn-sm" target="_blank" rel="noopener noreferrer">Empezar</a>
+              <a href="https://help.nextdns.io/" class="btn btn-sm btn-outline" target="_blank" rel="noopener noreferrer">Ayuda</a>
+            </div>
+          </div>
+
+          <!-- Herramienta 13 -->
+          <div class="herramienta-card" data-categoria="bloqueador" data-privacidad="medio" data-precio="gratuito">
+            <div class="herramienta-header">
+              <div class="herramienta-icono">🧱</div>
+              <div class="herramienta-info">
+                <span class="herramienta-categoria">Bloqueador</span>
+                <h3>AdGuard DNS</h3>
+                <div class="nivel-privacidad">
+                  <span>Privacidad:</span>
+                  <div class="nivel-barra">
+                    <div class="nivel-fill medio"></div>
+                  </div>
+                  <span>Medio</span>
+                </div>
+              </div>
+            </div>
+
+            <p class="herramienta-descripcion">
+              DNS público que bloquea anuncios y dominios maliciosos sin instalar extensiones adicionales.
+            </p>
+
+            <div class="herramienta-caracteristicas">
+              <h4>Características principales:</h4>
+              <ul class="caracteristicas-lista">
+                <li>Bloqueo de anuncios por DNS</li>
+                <li>Sin instalación de software</li>
+                <li>Compatible con routers y móviles</li>
+                <li>Configuración rápida</li>
+              </ul>
+            </div>
+
+            <div class="herramienta-enlaces">
+              <a href="https://adguard-dns.io/" class="btn btn-sm" target="_blank" rel="noopener noreferrer">Configurar</a>
+              <a href="https://adguard-dns.io/kb/" class="btn btn-sm btn-outline" target="_blank" rel="noopener noreferrer">Documentación</a>
+            </div>
+          </div>
+
+          <!-- Herramienta 14 -->
+          <div class="herramienta-card" data-categoria="vps" data-privacidad="medio" data-precio="gratuito">
+            <div class="herramienta-header">
+              <div class="herramienta-icono">🖥️</div>
+              <div class="herramienta-info">
+                <span class="herramienta-categoria">VPS / Cloud</span>
+                <h3>Oracle Cloud Free Tier</h3>
+                <div class="nivel-privacidad">
+                  <span>Privacidad:</span>
+                  <div class="nivel-barra">
+                    <div class="nivel-fill medio"></div>
+                  </div>
+                  <span>Medio</span>
+                </div>
+              </div>
+            </div>
+
+            <p class="herramienta-descripcion">
+              Plan con recursos siempre gratis para desplegar servidores, laboratorios y proyectos personales.
+            </p>
+
+            <div class="herramienta-caracteristicas">
+              <h4>Características principales:</h4>
+              <ul class="caracteristicas-lista">
+                <li>Instancias cloud siempre gratis</li>
+                <li>Opciones x86 y ARM</li>
+                <li>Ideal para autoalojar herramientas</li>
+                <li>Consola web completa</li>
+              </ul>
+            </div>
+
+            <div class="herramienta-enlaces">
+              <a href="https://www.oracle.com/cloud/free/" class="btn btn-sm" target="_blank" rel="noopener noreferrer">Crear cuenta</a>
+              <a href="https://www.oracle.com/cloud/free/faq/" class="btn btn-sm btn-outline" target="_blank" rel="noopener noreferrer">Guía oficial</a>
+            </div>
+          </div>
+
+          <!-- Herramienta 15 -->
+          <div class="herramienta-card" data-categoria="vps" data-privacidad="medio" data-precio="gratuito">
+            <div class="herramienta-header">
+              <div class="herramienta-icono">⚡</div>
+              <div class="herramienta-info">
+                <span class="herramienta-categoria">VPS / Cloud</span>
+                <h3>Cloudflare Workers</h3>
+                <div class="nivel-privacidad">
+                  <span>Privacidad:</span>
+                  <div class="nivel-barra">
+                    <div class="nivel-fill medio"></div>
+                  </div>
+                  <span>Medio</span>
+                </div>
+              </div>
+            </div>
+
+            <p class="herramienta-descripcion">
+              Plataforma serverless con plan gratuito para APIs, automatizaciones y microservicios en el edge.
+            </p>
+
+            <div class="herramienta-caracteristicas">
+              <h4>Características principales:</h4>
+              <ul class="caracteristicas-lista">
+                <li>Despliegue global en edge</li>
+                <li>Free tier para proyectos personales</li>
+                <li>Integración con KV y R2</li>
+                <li>Escalado automático</li>
+              </ul>
+            </div>
+
+            <div class="herramienta-enlaces">
+              <a href="https://workers.cloudflare.com/" class="btn btn-sm" target="_blank" rel="noopener noreferrer">Empezar</a>
+              <a href="https://developers.cloudflare.com/workers/" class="btn btn-sm btn-outline" target="_blank" rel="noopener noreferrer">Documentación</a>
+            </div>
+          </div>
+
+          <!-- Herramienta 16 -->
+          <div class="herramienta-card" data-categoria="vps" data-privacidad="bajo" data-precio="freemium">
+            <div class="herramienta-header">
+              <div class="herramienta-icono">🚀</div>
+              <div class="herramienta-info">
+                <span class="herramienta-categoria">VPS / Cloud</span>
+                <h3>Render</h3>
+                <div class="nivel-privacidad">
+                  <span>Privacidad:</span>
+                  <div class="nivel-barra">
+                    <div class="nivel-fill bajo"></div>
+                  </div>
+                  <span>Bajo</span>
+                </div>
+              </div>
+            </div>
+
+            <p class="herramienta-descripcion">
+              Hosting cloud para apps y APIs con plan gratuito de arranque para demos y proyectos iniciales.
+            </p>
+
+            <div class="herramienta-caracteristicas">
+              <h4>Características principales:</h4>
+              <ul class="caracteristicas-lista">
+                <li>Despliegue automático desde Git</li>
+                <li>Servicios web y cron jobs</li>
+                <li>SSL y dominios incluidos</li>
+                <li>Plan gratuito limitado</li>
+              </ul>
+            </div>
+
+            <div class="herramienta-enlaces">
+              <a href="https://render.com/" class="btn btn-sm" target="_blank" rel="noopener noreferrer">Empezar</a>
+              <a href="https://render.com/docs/free" class="btn btn-sm btn-outline" target="_blank" rel="noopener noreferrer">Límites free</a>
             </div>
           </div>
 
@@ -681,102 +1126,11 @@
 
   <!-- JavaScript -->
   <script src="main.js"></script>
-  
-  <!-- JavaScript específico para NE -->
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      // Filtros de herramientas
-      const filtroCategoria = document.getElementById('filtroCategoria');
-      const filtroPrivacidad = document.getElementById('filtroPrivacidad');
-      const filtroPrecio = document.getElementById('filtroPrecio');
-      const btnLimpiarFiltros = document.getElementById('btnLimpiarFiltros');
-      const herramientas = document.querySelectorAll('.herramienta-card');
-
-      function filtrarHerramientas() {
-        const categoria = filtroCategoria.value;
-        const privacidad = filtroPrivacidad.value;
-        const precio = filtroPrecio.value;
-
-        herramientas.forEach(herramienta => {
-          const cumpleCategoria = categoria === 'todas' || herramienta.dataset.categoria === categoria;
-          const cumplePrivacidad = privacidad === 'todos' || herramienta.dataset.privacidad === privacidad;
-          const cumplePrecio = precio === 'todos' || herramienta.dataset.precio === precio;
-
-          if (cumpleCategoria && cumplePrivacidad && cumplePrecio) {
-            herramienta.style.display = 'block';
-          } else {
-            herramienta.style.display = 'none';
-          }
-        });
-      }
-
-      // Event listeners para filtros
-      filtroCategoria.addEventListener('change', filtrarHerramientas);
-      filtroPrivacidad.addEventListener('change', filtrarHerramientas);
-      filtroPrecio.addEventListener('change', filtrarHerramientas);
-
-      btnLimpiarFiltros.addEventListener('click', function() {
-        filtroCategoria.value = 'todas';
-        filtroPrivacidad.value = 'todos';
-        filtroPrecio.value = 'todos';
-        filtrarHerramientas();
-      });
-
-      // Inicializar filtros
-      filtrarHerramientas();
-    });
-
-    // Sistema de Modo Claro/Oscuro
-    document.addEventListener('DOMContentLoaded', function() {
-      const temaToggle = document.getElementById('temaToggle');
-      const temaIcono = temaToggle.querySelector('.tema-icono');
-      const body = document.body;
-
-      // Cargar tema guardado
-      const temaGuardado = localStorage.getItem('tema') || 'claro';
-      body.setAttribute('data-tema', temaGuardado);
-      actualizarIconoTema(temaGuardado);
-
-      // Alternar tema
-      temaToggle.addEventListener('click', function() {
-        const temaActual = body.getAttribute('data-tema');
-        const nuevoTema = temaActual === 'claro' ? 'oscuro' : 'claro';
-        
-        body.setAttribute('data-tema', nuevoTema);
-        localStorage.setItem('tema', nuevoTema);
-        actualizarIconoTema(nuevoTema);
-        
-        // Efecto de transición
-        temaToggle.style.transform = 'scale(0.9)';
-        setTimeout(() => {
-          temaToggle.style.transform = 'scale(1)';
-        }, 150);
-      });
-
-      function actualizarIconoTema(tema) {
-        temaIcono.textContent = tema === 'claro' ? '🌙' : '☀️';
-      }
-
-      // Detectar preferencia del sistema
-      const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
-      
-      function detectarTemaSistema(e) {
-        // Solo aplicar si no hay tema guardado manualmente
-        if (!localStorage.getItem('tema')) {
-          const temaSistema = e.matches ? 'oscuro' : 'claro';
-          body.setAttribute('data-tema', temaSistema);
-          actualizarIconoTema(temaSistema);
-        }
-      }
-
-      // Escuchar cambios en la preferencia del sistema
-      mediaQuery.addEventListener('change', detectarTemaSistema);
-      
-      // Aplicar tema del sistema al cargar (si no hay preferencia guardada)
-      if (!localStorage.getItem('tema')) {
-        detectarTemaSistema(mediaQuery);
-      }
-    });
-  </script>
+  <script src="js/page-ne.js"></script>
+  <script src="js/theme.js"></script>
 </body>
 </html>
+
+
+
+

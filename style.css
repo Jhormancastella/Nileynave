@@ -1,4 +1,4 @@
-/* ===== RESET Y VARIABLES GLOBALES ===== */
+﻿/* ===== RESET Y VARIABLES GLOBALES ===== */
 :root {
   /* Colores principales */
   --azul-profundo: #1a2b4d;
@@ -36,10 +36,9 @@
   --fuente-subtitulo: 1.5rem;
   --fuente-texto: 1rem;
   --fuente-pequena: 0.875rem;
-  
-  /* Layout */
   --altura-nav: 80px;
   --ancho-maximo: 1200px;
+  --fondo-secundario-rgb: 255, 255, 255;
 }
 
 /* ===== RESET BASE ===== */
@@ -218,6 +217,9 @@ a:hover {
 }
 
 .hamburger {
+  background: transparent;
+  border: 0;
+  padding: 0;
   display: none;
   flex-direction: column;
   justify-content: space-between;
@@ -568,7 +570,10 @@ a:hover {
     left: 0;
   }
 
-  .hamburger {
+.hamburger {
+  background: transparent;
+  border: 0;
+  padding: 0;
     display: flex;
   }
 
@@ -640,3 +645,22 @@ a:hover {
   white-space: nowrap;
   border: 0;
 }
+
+[data-tema="oscuro"] {
+  --fondo-secundario-rgb: 45, 55, 72;
+}
+
+.menu a:focus-visible,
+.tema-toggle:focus-visible,
+.hamburger:focus-visible,
+.btn:focus-visible {
+  outline: 3px solid var(--dorado);
+  outline-offset: 2px;
+}
+
+
+
+
+
+
+

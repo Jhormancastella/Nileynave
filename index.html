@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
@@ -247,11 +247,11 @@
         <span class="tema-icono">🌙</span>
       </button>
 
-      <div class="hamburger" id="hamburger" aria-label="Menú de navegación">
+      <button class="hamburger" id="hamburger" aria-label="Menú de navegación" aria-expanded="false" aria-controls="menu" type="button">
         <span></span>
         <span></span>
         <span></span>
-      </div>
+      </button>
     </div>
   </nav>
 
@@ -282,6 +282,7 @@
               <li>Navegadores privados y seguros</li>
               <li>Buscadores alternativos</li>
               <li>VPNs y herramientas de anonimato</li>
+              <li>VPS y cloud free-tier para autoalojar</li>
               <li>Extensiones de privacidad</li>
               <li>Bloqueadores de anuncios</li>
               <li>Herramientas anti-rastreo</li>
@@ -305,7 +306,7 @@
               <li>CBR/CBZ - Cómics digitales</li>
               <li>MOBI - Kindle</li>
               <li>Audiobooks</li>
-              <li>Recursos académicos</li>
+              <li>Recursos académicos y científicos abiertos</li>
             </ul>
           </div>
 
@@ -313,9 +314,9 @@
             <h4>Características:</h4>
             <ul>
               <li>Carátulas y descripciones</li>
-              <li>Enlaces de compra y descarga</li>
+              <li>Enlaces reales de lectura, descarga y préstamo</li>
               <li>Búsqueda por categorías</li>
-              <li>Recomendaciones</li>
+              <li>Plataformas gratuitas verificadas</li>
             </ul>
           </div>
           
@@ -335,8 +336,8 @@
               <li>Bancos de imágenes libres</li>
               <li>Fuentes y tipografías</li>
               <li>Iconos y vectores</li>
-              <li>Texturas y patrones</li>
-              <li>Plantillas editables</li>
+              <li>Paletas y herramientas de color</li>
+              <li>Plantillas y recursos editables</li>
             </ul>
           </div>
 
@@ -345,8 +346,8 @@
             <ul>
               <li>Editores online</li>
               <li>Generadores de paletas</li>
-              <li>Conversores de formato</li>
-              <li>Tutoriales y guías</li>
+              <li>Bibliotecas de iconos y SVG</li>
+              <li>Tutoriales oficiales gratuitos</li>
             </ul>
           </div>
           
@@ -376,7 +377,7 @@
             No vendemos tu atención. No rastreamos tu comportamiento. Solo te ofrecemos <strong>puertos seguros en el océano digital</strong>.
           </p>
           <p>
-            ¿Tienes un recurso que merece estar aquí? <a href="#" class="text-link">Sugiere un enlace</a>.
+            ¿Tienes un recurso que merece estar aquí? <a href="mailto:hola@nileynave.com?subject=Sugerencia%20de%20enlace%20-%20Nileynave" class="text-link">Sugiere un enlace</a>.
           </p>
         </div>
       </div>
@@ -390,60 +391,9 @@
 
   <!-- JavaScript -->
   <script src="main.js"></script>
-  
-  <!-- JavaScript para Modo Oscuro -->
-  <script>
-    // Sistema de Modo Claro/Oscuro
-    document.addEventListener('DOMContentLoaded', function() {
-      const temaToggle = document.getElementById('temaToggle');
-      const temaIcono = temaToggle.querySelector('.tema-icono');
-      const body = document.body;
-
-      // Cargar tema guardado
-      const temaGuardado = localStorage.getItem('tema') || 'claro';
-      body.setAttribute('data-tema', temaGuardado);
-      actualizarIconoTema(temaGuardado);
-
-      // Alternar tema
-      temaToggle.addEventListener('click', function() {
-        const temaActual = body.getAttribute('data-tema');
-        const nuevoTema = temaActual === 'claro' ? 'oscuro' : 'claro';
-        
-        body.setAttribute('data-tema', nuevoTema);
-        localStorage.setItem('tema', nuevoTema);
-        actualizarIconoTema(nuevoTema);
-        
-        // Efecto de transición
-        temaToggle.style.transform = 'scale(0.9)';
-        setTimeout(() => {
-          temaToggle.style.transform = 'scale(1)';
-        }, 150);
-      });
-
-      function actualizarIconoTema(tema) {
-        temaIcono.textContent = tema === 'claro' ? '🌙' : '☀️';
-      }
-
-      // Detectar preferencia del sistema
-      const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
-      
-      function detectarTemaSistema(e) {
-        // Solo aplicar si no hay tema guardado manualmente
-        if (!localStorage.getItem('tema')) {
-          const temaSistema = e.matches ? 'oscuro' : 'claro';
-          body.setAttribute('data-tema', temaSistema);
-          actualizarIconoTema(temaSistema);
-        }
-      }
-
-      // Escuchar cambios en la preferencia del sistema
-      mediaQuery.addEventListener('change', detectarTemaSistema);
-      
-      // Aplicar tema del sistema al cargar (si no hay preferencia guardada)
-      if (!localStorage.getItem('tema')) {
-        detectarTemaSistema(mediaQuery);
-      }
-    });
-  </script>
+  <script src="js/theme.js"></script>
 </body>
 </html>
+
+
+

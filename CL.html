@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
@@ -442,6 +442,7 @@
         <a href="index.html">Inicio</a>
         <a href="#biblioteca" class="active">Biblioteca</a>
         <a href="#categorias">Categorías</a>
+        <a href="#plataformas">Plataformas</a>
       </div>
 
       <!-- Botón Toggle Tema -->
@@ -449,11 +450,11 @@
         <span class="tema-icono">🌙</span>
       </button>
 
-      <div class="hamburger" id="hamburger" aria-label="Menú de navegación">
+      <button class="hamburger" id="hamburger" aria-label="Menú de navegación" aria-expanded="false" aria-controls="menu" type="button">
         <span></span>
         <span></span>
         <span></span>
-      </div>
+      </button>
     </div>
   </nav>
 
@@ -487,7 +488,7 @@
         </div>
         <div class="estadistica-card">
           <span class="estadistica-numero">100%</span>
-          <span class="estadistica-texto">Gratuito</span>
+          <span class="estadistica-texto">Fuentes verificadas</span>
         </div>
       </div>
 
@@ -502,7 +503,7 @@
       </div>
 
       <!-- Libros por categoría -->
-      <div class="categoria-seccion">
+      <div class="categoria-seccion" id="categorias">
         <h3 class="categoria-titulo">📚 Literatura Universal</h3>
         <div class="libros-grid">
           
@@ -525,8 +526,8 @@
               </div>
               
               <div class="libro-acciones">
-                <a href="#" class="btn btn-sm btn-descarga">Descargar PDF</a>
-                <a href="#" class="btn btn-sm btn-preview">Vista previa</a>
+                <a href="https://openlibrary.org/search?q=Cien+a%C3%B1os+de+soledad" class="btn btn-sm btn-descarga" target="_blank" rel="noopener noreferrer">Open Library</a>
+                <a href="https://books.google.com/books?q=Cien+a%C3%B1os+de+soledad" class="btn btn-sm btn-preview" target="_blank" rel="noopener noreferrer">Google Books</a>
               </div>
             </div>
           </div>
@@ -550,8 +551,8 @@
               </div>
               
               <div class="libro-acciones">
-                <a href="#" class="btn btn-sm btn-descarga">Descargar EPUB</a>
-                <a href="#" class="btn btn-sm btn-preview">Vista previa</a>
+                <a href="https://openlibrary.org/search?q=1984+George+Orwell" class="btn btn-sm btn-descarga" target="_blank" rel="noopener noreferrer">Open Library</a>
+                <a href="https://books.google.com/books?q=1984+George+Orwell" class="btn btn-sm btn-preview" target="_blank" rel="noopener noreferrer">Google Books</a>
               </div>
             </div>
           </div>
@@ -575,8 +576,8 @@
               </div>
               
               <div class="libro-acciones">
-                <a href="#" class="btn btn-sm btn-descarga">Descargar PDF</a>
-                <a href="#" class="btn btn-sm btn-preview">Vista previa</a>
+                <a href="https://openlibrary.org/search?q=Breve+historia+del+tiempo" class="btn btn-sm btn-descarga" target="_blank" rel="noopener noreferrer">Open Library</a>
+                <a href="https://books.google.com/books?q=Breve+historia+del+tiempo" class="btn btn-sm btn-preview" target="_blank" rel="noopener noreferrer">Google Books</a>
               </div>
             </div>
           </div>
@@ -608,8 +609,8 @@
               </div>
               
               <div class="libro-acciones">
-                <a href="#" class="btn btn-sm btn-descarga">Descargar PDF</a>
-                <a href="#" class="btn btn-sm btn-preview">Vista previa</a>
+                <a href="https://openlibrary.org/search?q=The+Pragmatic+Programmer" class="btn btn-sm btn-descarga" target="_blank" rel="noopener noreferrer">Open Library</a>
+                <a href="https://books.google.com/books?q=The+Pragmatic+Programmer" class="btn btn-sm btn-preview" target="_blank" rel="noopener noreferrer">Google Books</a>
               </div>
             </div>
           </div>
@@ -633,8 +634,8 @@
               </div>
               
               <div class="libro-acciones">
-                <a href="#" class="btn btn-sm btn-descarga">Descargar EPUB</a>
-                <a href="#" class="btn btn-sm btn-preview">Vista previa</a>
+                <a href="https://openlibrary.org/search?q=El+gen+egoista" class="btn btn-sm btn-descarga" target="_blank" rel="noopener noreferrer">Open Library</a>
+                <a href="https://books.google.com/books?q=El+gen+egoista" class="btn btn-sm btn-preview" target="_blank" rel="noopener noreferrer">Google Books</a>
               </div>
             </div>
           </div>
@@ -658,8 +659,8 @@
               </div>
               
               <div class="libro-acciones">
-                <a href="#" class="btn btn-sm btn-descarga">Descargar PDF</a>
-                <a href="#" class="btn btn-sm btn-preview">Vista previa</a>
+                <a href="https://openlibrary.org/search?q=El+mundo+de+sofia" class="btn btn-sm btn-descarga" target="_blank" rel="noopener noreferrer">Open Library</a>
+                <a href="https://books.google.com/books?q=El+mundo+de+sofia" class="btn btn-sm btn-preview" target="_blank" rel="noopener noreferrer">Google Books</a>
               </div>
             </div>
           </div>
@@ -706,6 +707,96 @@
     </div>
   </section>
 
+  <!-- Plataformas gratuitas -->
+  <section id="plataformas" class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Plataformas Gratuitas Recomendadas</h2>
+        <p>Fuentes confiables para libros, cursos y contenidos académicos abiertos</p>
+      </div>
+
+      <div class="grid grid-3">
+        <article class="card">
+          <h3>Bibliotecas Digitales</h3>
+          <p>Catálogos abiertos para lectura y préstamo digital legal.</p>
+          <div class="libro-acciones">
+            <a href="https://www.gutenberg.org/" class="btn btn-sm" target="_blank" rel="noopener noreferrer">Project Gutenberg</a>
+            <a href="https://openlibrary.org/" class="btn btn-sm btn-preview" target="_blank" rel="noopener noreferrer">Open Library</a>
+          </div>
+          <div class="libro-acciones mt-2">
+            <a href="https://archive.org/details/texts" class="btn btn-sm" target="_blank" rel="noopener noreferrer">Internet Archive</a>
+            <a href="https://standardebooks.org/" class="btn btn-sm btn-preview" target="_blank" rel="noopener noreferrer">Standard Ebooks</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <h3>Cursos Online Gratuitos</h3>
+          <p>Formación abierta con rutas de aprendizaje por niveles.</p>
+          <div class="libro-acciones">
+            <a href="https://www.khanacademy.org/" class="btn btn-sm" target="_blank" rel="noopener noreferrer">Khan Academy</a>
+            <a href="https://ocw.mit.edu/" class="btn btn-sm btn-preview" target="_blank" rel="noopener noreferrer">MIT OpenCourseWare</a>
+          </div>
+          <div class="libro-acciones mt-2">
+            <a href="https://learn.saylor.org/" class="btn btn-sm" target="_blank" rel="noopener noreferrer">Saylor Academy</a>
+            <a href="https://www.open.edu/openlearn/" class="btn btn-sm btn-preview" target="_blank" rel="noopener noreferrer">OpenLearn</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <h3>Libros de Texto Abiertos</h3>
+          <p>Material académico libre para escuela, universidad y autoestudio.</p>
+          <div class="libro-acciones">
+            <a href="https://openstax.org/" class="btn btn-sm" target="_blank" rel="noopener noreferrer">OpenStax</a>
+            <a href="https://libretexts.org/" class="btn btn-sm btn-preview" target="_blank" rel="noopener noreferrer">LibreTexts</a>
+          </div>
+          <div class="libro-acciones mt-2">
+            <a href="https://www.ck12.org/student/" class="btn btn-sm" target="_blank" rel="noopener noreferrer">CK-12</a>
+            <a href="https://en.wikibooks.org/" class="btn btn-sm btn-preview" target="_blank" rel="noopener noreferrer">Wikibooks</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <h3>Investigación Abierta</h3>
+          <p>Preprints, revistas y repositorios científicos con acceso libre.</p>
+          <div class="libro-acciones">
+            <a href="https://arxiv.org/" class="btn btn-sm" target="_blank" rel="noopener noreferrer">arXiv</a>
+            <a href="https://doaj.org/" class="btn btn-sm btn-preview" target="_blank" rel="noopener noreferrer">DOAJ</a>
+          </div>
+          <div class="libro-acciones mt-2">
+            <a href="https://scielo.org/" class="btn btn-sm" target="_blank" rel="noopener noreferrer">SciELO</a>
+            <a href="https://www.redalyc.org/home.oa" class="btn btn-sm btn-preview" target="_blank" rel="noopener noreferrer">Redalyc</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <h3>Repositorios y Datos</h3>
+          <p>Datasets y material reutilizable para proyectos, tesis y análisis.</p>
+          <div class="libro-acciones">
+            <a href="https://zenodo.org/" class="btn btn-sm" target="_blank" rel="noopener noreferrer">Zenodo</a>
+            <a href="https://figshare.com/" class="btn btn-sm btn-preview" target="_blank" rel="noopener noreferrer">Figshare</a>
+          </div>
+          <div class="libro-acciones mt-2">
+            <a href="https://datadryad.org/" class="btn btn-sm" target="_blank" rel="noopener noreferrer">Dryad</a>
+            <a href="https://data.worldbank.org/" class="btn btn-sm btn-preview" target="_blank" rel="noopener noreferrer">World Bank Data</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <h3>Idiomas y Habilidades</h3>
+          <p>Recursos abiertos para idiomas, programación y habilidades prácticas.</p>
+          <div class="libro-acciones">
+            <a href="https://www.duolingo.com/" class="btn btn-sm" target="_blank" rel="noopener noreferrer">Duolingo</a>
+            <a href="https://www.freecodecamp.org/" class="btn btn-sm btn-preview" target="_blank" rel="noopener noreferrer">freeCodeCamp</a>
+          </div>
+          <div class="libro-acciones mt-2">
+            <a href="https://cs50.harvard.edu/x/" class="btn btn-sm" target="_blank" rel="noopener noreferrer">CS50</a>
+            <a href="https://www.codecademy.com/catalog" class="btn btn-sm btn-preview" target="_blank" rel="noopener noreferrer">Codecademy</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
   <!-- Footer -->
   <footer class="footer">
     <p>&copy; 2025 Nileynave. Conocimiento Libre - Democratizando el acceso a la educación.</p>
@@ -713,118 +804,11 @@
 
   <!-- JavaScript -->
   <script src="main.js"></script>
-  
-  <!-- JavaScript específico para CL -->
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      // Filtros rápidos
-      const filtrosRapidos = document.querySelectorAll('.filtro-rapido');
-      const libros = document.querySelectorAll('.libro-card');
-
-      filtrosRapidos.forEach(filtro => {
-        filtro.addEventListener('click', function() {
-          // Remover activo de todos los filtros
-          filtrosRapidos.forEach(f => f.classList.remove('active'));
-          // Activar filtro clickeado
-          this.classList.add('active');
-          
-          const categoria = this.dataset.categoria;
-          
-          // Filtrar libros
-          libros.forEach(libro => {
-            if (categoria === 'todas' || libro.dataset.categoria === categoria) {
-              libro.style.display = 'block';
-            } else {
-              libro.style.display = 'none';
-            }
-          });
-        });
-      });
-
-      // Simular contador de estadísticas
-      function animarContadores() {
-        const contadores = document.querySelectorAll('.estadistica-numero');
-        
-        contadores.forEach(contador => {
-          const target = parseInt(contador.textContent);
-          const incremento = target / 100;
-          let current = 0;
-          
-          const timer = setInterval(() => {
-            current += incremento;
-            if (current >= target) {
-              current = target;
-              clearInterval(timer);
-            }
-            contador.textContent = Math.floor(current);
-          }, 20);
-        });
-      }
-      
-      // Iniciar animación cuando la sección sea visible
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            animarContadores();
-            observer.unobserve(entry.target);
-          }
-        });
-      });
-      
-      observer.observe(document.querySelector('.estadisticas'));
-    });
-
-    // Sistema de Modo Claro/Oscuro
-    document.addEventListener('DOMContentLoaded', function() {
-      const temaToggle = document.getElementById('temaToggle');
-      const temaIcono = temaToggle.querySelector('.tema-icono');
-      const body = document.body;
-
-      // Cargar tema guardado
-      const temaGuardado = localStorage.getItem('tema') || 'claro';
-      body.setAttribute('data-tema', temaGuardado);
-      actualizarIconoTema(temaGuardado);
-
-      // Alternar tema
-      temaToggle.addEventListener('click', function() {
-        const temaActual = body.getAttribute('data-tema');
-        const nuevoTema = temaActual === 'claro' ? 'oscuro' : 'claro';
-        
-        body.setAttribute('data-tema', nuevoTema);
-        localStorage.setItem('tema', nuevoTema);
-        actualizarIconoTema(nuevoTema);
-        
-        // Efecto de transición
-        temaToggle.style.transform = 'scale(0.9)';
-        setTimeout(() => {
-          temaToggle.style.transform = 'scale(1)';
-        }, 150);
-      });
-
-      function actualizarIconoTema(tema) {
-        temaIcono.textContent = tema === 'claro' ? '🌙' : '☀️';
-      }
-
-      // Detectar preferencia del sistema
-      const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
-      
-      function detectarTemaSistema(e) {
-        // Solo aplicar si no hay tema guardado manualmente
-        if (!localStorage.getItem('tema')) {
-          const temaSistema = e.matches ? 'oscuro' : 'claro';
-          body.setAttribute('data-tema', temaSistema);
-          actualizarIconoTema(temaSistema);
-        }
-      }
-
-      // Escuchar cambios en la preferencia del sistema
-      mediaQuery.addEventListener('change', detectarTemaSistema);
-      
-      // Aplicar tema del sistema al cargar (si no hay preferencia guardada)
-      if (!localStorage.getItem('tema')) {
-        detectarTemaSistema(mediaQuery);
-      }
-    });
-  </script>
+  <script src="js/page-cl.js"></script>
+  <script src="js/theme.js"></script>
 </body>
 </html>
+
+
+
+
